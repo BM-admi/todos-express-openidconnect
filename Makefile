@@ -6,6 +6,9 @@ well-known:
 
 local-start:
 	[ -d .node_modules ] || npm install
+	npm audit fix --force
+	npm run format
+	npm run lint
 	npm start
 
 clean:

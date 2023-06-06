@@ -26,11 +26,14 @@ the following environment variables:
 ```
 CLIENT_ID=__INSERT_CLIENT_ID_HERE__
 CLIENT_SECRET=__INSERT_CLIENT_SECRET_HERE__
+ONELOGIN_ACCOUNT=__INSERT_ONE_LOGIN_ACCOUNT_HERE__
 ```
 
 Start the server.
 
 ```bash
+$ cp .env.sample .env
+$ npm install
 $ npm start
 ```
 
