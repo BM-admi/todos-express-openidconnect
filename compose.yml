@@ -1,0 +1,15 @@
+version: "3"
+
+services:
+  frontend:
+    build: .
+    tty: true
+    stdin_open: true
+    container_name: frontend
+    volumes:
+      - .:/usr/src/app
+      - ./node_modules:/usr/src/app/node_modules
+    ports:
+      - "3000:3000"
+    env_file:
+      - .env
