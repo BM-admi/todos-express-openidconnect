@@ -9,7 +9,7 @@ example as a starting point for your own web applications.
 To run this app, clone the repository and install dependencies:
 
 ```bash
-$ git clone https://github.com/passport/todos-express-openidconnect.git
+$ git clone https://github.com/BM-admi/todos-express-openidconnect.git
 $ cd todos-express-openidconnect
 $ npm install
 ```
@@ -33,8 +33,7 @@ Start the server.
 
 ```bash
 $ cp .env.sample .env
-$ npm install
-$ npm start
+$ make
 ```
 
 Navigate to [`http://localhost:3000`](http://localhost:3000).
