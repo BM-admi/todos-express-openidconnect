@@ -13,4 +13,4 @@ local-start:
 	npm start
 
 clean:
-	docker-compose down -v
+	docker-compose down --remove-orphans -v

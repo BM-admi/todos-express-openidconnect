@@ -172,4 +172,8 @@ router.post("/clear-completed", ensureLoggedIn, function (req, res, next) {
   );
 });
 
+router.get("/healthcheck", function (req, res) {
+  res.status(200).json({ alive: "Running: " + Date.now() });
+});
+
 module.exports = router;

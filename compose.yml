@@ -1,11 +1,11 @@
 version: "3"
 
 services:
-  frontend:
+  todos:
     build: .
     tty: true
     stdin_open: true
-    container_name: frontend
+    container_name: todos
     volumes:
       - .:/usr/src/app
       - ./node_modules:/usr/src/app/node_modules
@@ -15,3 +15,12 @@ services:
       - .env
     environment:
       - DEBUG=*
+      - VIRTUAL_HOST=todos.example
+      - VIRTUAL_PORT=3000
+
+  nginx-proxy:
+    image: nginxproxy/nginx-proxy
+    ports:
+      - "80:80"
+    volumes:
+      - /var/run/docker.sock:/tmp/docker.sock:ro
